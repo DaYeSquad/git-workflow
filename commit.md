@@ -31,7 +31,7 @@ Message Header 只占一行, 用于简短地描述这次提交的内容, 包含�
 `<type>` 用于描述本次 commit 更改内容的类型. 只允许使用下列7个标识
 - `feat` : 特性(feature)
 - `fix` : 修复bug
-- `prof` : 性能(performance)
+- `perf` : 性能(performance)
 - `refactor` : 重构(不是新增功能，也不是修改 bug 的代码变动)
 - `docs` : 文档
 - `style` : 格式, 比如缩进, 丢失分号等不影响代码运行的变动
