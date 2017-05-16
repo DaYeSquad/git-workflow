@@ -3,9 +3,9 @@
 ## 目标
 
 约定Git Commit Message格式的目的:
-- 根据commit message 自动生成CHANGELOG
-- 忽略某些不重要commits
-- 最重要的是约定格式的commit信息更加易读
+- 根据 commit message 自动生成 CHANGELOG
+- 忽略某些不重要 commits
+- 最重要的是, 可以让 commit 信息更加易读
 
 ## Commit Message 格式
 
@@ -55,7 +55,7 @@ Message Body 是对本次 commit 的详细描述
 
 有两个要点:
 
-1. 和`<subject>` 一样, 用第一人称现在时的动词, 比如用"change", 而不是"changed"或"changes"
+1. 用第一人称现在时的动词, 比如用"change", 而不是"changed"或"changes"
 2. 应该说明代码变动的动机，以及与以前行为的对比
 
 ### Message Footer
