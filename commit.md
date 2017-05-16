@@ -2,10 +2,10 @@
 
 ## 目标
 
-约定Git Commit Message格式的目的包括:
+约定Git Commit Message格式的目的:
 - 根据commit message 自动生成CHANGELOG
-- 使用git bisect来忽略某些commits
-- 更加易读
+- 忽略某些不重要commits
+- 最重要的是约定格式的commit信息更加易读
 
 ## Commit Message 格式
 
@@ -19,20 +19,22 @@
 
 commit message 每一行的最大长度限制为*100个字符*, 这是为了避免自动换行影响美观.
 
-每条commit message都包含一个header, 一个body和一个footer, 中间以一个空行隔开.
+每条 commit message 都包含一个 header, 一个 body 和一个 footer, 中间以一个空行隔开. header 是必须的, body 和 footer 是选填项.
+
 
 ### Message Header
 
-Message Header只占一行, 用于简短地描述这次提交的内容, 包含三个字段`<type>`(必须), `<scope>`(可选)和 `<subject>`(必须).
+Message Header 只占一行, 用于简短地描述这次提交的内容, 包含三个字段`<type>`(必须), `<scope>`(可选)和 `<subject>`(必须).
 
 #### `<type>`
 
-`<type>` 用于描述本次commit 更改内容的类型. 只允许使用下列7个标识
+`<type>` 用于描述本次 commit 更改内容的类型. 只允许使用下列7个标识
 - `feat` : 特性(feature)
 - `fix` : 修复bug
+- `prof` : 性能(performance)
+- `refactor` : 重构(不是新增功能，也不是修改 bug 的代码变动)
 - `docs` : 文档
 - `style` : 格式, 比如缩进, 丢失分号等不影响代码运行的变动
-- `refactor` : 重构(不是新增功能，也不是修改bug的代码变动)
 - `test` : 增加测试
 - `chore` : 构建过程或辅助工具的变动
 
@@ -53,12 +55,12 @@ Message Body 是对本次 commit 的详细描述
 
 有两个要点:
 
-1. 和`<subject>` 一样, 用第一人称现在时的动词, 比如"change", 而不是"changed"或"changes"
+1. 和`<subject>` 一样, 用第一人称现在时的动词, 比如用"change", 而不是"changed"或"changes"
 2. 应该说明代码变动的动机，以及与以前行为的对比
 
 ### Message Footer
 
-Message Footer是选填 只用于两种情况:
+Message Footer只用于两种情况:
 
 #### 不兼容变动 (BREAKING CHANGES)
 
@@ -121,5 +123,10 @@ revert: feat(pencil): add 'graphiteWidth' option
 
 ### 其他
 
-必须使用英文撰写commit message, 不允许出现中文, 中文标点符号和汉语拼音.
+- 必须使用英文撰写 message header, 不允许出现中文, 中文标点符号和汉语拼音.
+
 可以借助[google translate](https://translate.google.com/), [百度翻译](http://fanyi.baidu.com/)等翻译工具辅助撰写.
+
+message body 和 footer 可以使用中文.
+
+- 本规则主要参考了 `angular.js` 的 [Commit Message Guidelines](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit), 如有理解不清楚的地方可以参考原文.
