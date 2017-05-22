@@ -34,7 +34,7 @@ Available types and what it mean are list here
             and libraries such as documentation generation
 
 EOF
-echo -e "Please read http://git.azure.gagogroup.cn/sakura/git-workflow/blob/master/commit.md"
+echo -e "Please read https://github.com/DaYeSquad/git-workflow/blob/master/commit.md"
 echo
 
 exit 1
