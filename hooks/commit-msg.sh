@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# 将文件置于.git/hooks/下, 并修改权限为755
+# 将文件置于.git/hooks/下, 去掉.sh后缀，并修改权限为755
+
 msg=$(head -n 1 $1)
 
 if echo $msg | grep -iqE "^Merge "; then
@@ -37,4 +38,3 @@ echo -e "Please read http://git.azure.gagogroup.cn/sakura/git-workflow/blob/mast
 echo
 
 exit 1
-
