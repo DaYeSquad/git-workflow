@@ -40,7 +40,18 @@ Message Header 只占一行, 用于简短地描述这次提交的内容, 包含�
 
 #### `<scope>`
 
-`<scope>` 用于描述commit 影响的范围, 比如控制层, 视图层等, 视项目不同而变
+`<scope>` 用于描述commit 影响的范围, 比如控制层, 视图层等, 视项目不同而变  
+
+##### Example `<scope>` values:
+-  `init`
+-  `runner`
+-  `watcher`
+-  `config`
+-  `web-server`
+-  `proxy`
+-  `etc.`
+  
+>  <scope> 可以为空（全局或者单一且小的模块）
 
 #### `<subject>`
 
