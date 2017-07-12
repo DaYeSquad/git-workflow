@@ -20,7 +20,7 @@ do
     continue
   fi;
 
-  if echo $msg | grep -qE "^(feat|fix|docs|style|refactor|perf|test|chore)(\([^()]{1,}\)){0,1}: [a-z].*"; then
+  if echo $msg | grep -qE "^(feat|fix|docs|style|refactor|perf|test|chore|ci)(\([^()]{1,}\)){0,1}: [a-z].*"; then
     continue
   fi;
 
