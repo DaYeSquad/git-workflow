@@ -37,9 +37,10 @@ Message Header 只占一行, 用于简短地描述这次提交的内容, 包含�
 - `style` : 格式, 比如缩进, 丢失分号等不影响代码运行的变动
 - `test` : 增加测试
 - `chore` : 构建过程或辅助工具的变动
+- `ci`: ci配置文件
 
 #### `<scope>`
-
+ 
 `<scope>` 用于描述commit 影响的范围, 比如控制层, 视图层等, 视项目不同而变  
 
 ##### Example `<scope>` values:
