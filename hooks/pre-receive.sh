@@ -40,6 +40,8 @@ do
     test:     Adding missing tests
     chore:    Changes to the build process or auxiliary tools
               and libraries such as documentation generation
+    ci:       Changes to our CI configuration files and scripts 
+              (example scopes: Travis, Circle, BrowserStack, SauceLabs)
 
 EOF
   echo -e "Please read https://github.com/DaYeSquad/git-workflow/blob/master/commit.md"
