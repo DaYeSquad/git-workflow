@@ -12,7 +12,11 @@ if echo $msg | grep -iqE "^Revert "; then
   exit 0
 fi;
 
-if echo $msg | grep -iqE "^(feat|fix|docs|style|refactor|perf|test|chore)(\([^()]{1,}\)){0,1}: [a-z].*"; then
+if echo $msg | grep -iqE "^\d{1,2}[.]\d{1,2}[.]\d{1,2}$"; then
+  exit 0
+fi;
+
+if echo $msg | grep -iqE "^(feat|fix|docs|style|refactor|perf|test|chore|ci)(\([^()]{1,}\)){0,1}: [a-z].*"; then
   exit 0
 fi;
 
@@ -32,6 +36,8 @@ Available types and what it mean are list here
   test:     Adding missing tests
   chore:    Changes to the build process or auxiliary tools
             and libraries such as documentation generation
+  ci:       Changes to our CI configuration files and scripts 
+            (example scopes: Travis, Circle, BrowserStack, SauceLabs)
 
 EOF
 echo -e "Please read https://github.com/DaYeSquad/git-workflow/blob/master/commit.md"
