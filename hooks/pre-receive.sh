@@ -16,7 +16,11 @@ do
     continue
   fi;
 
-  if echo $msg | grep -iqE "^Revert "; then
+  if echo $msg | grep -iqE "^Merge "; then
+    continue
+  fi;
+
+  if echo $msg | grep -iqE "^\d{1,2}[.]\d{1,2}[.]\d{1,2}$"; then
     continue
   fi;
 

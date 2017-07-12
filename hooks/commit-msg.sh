@@ -12,6 +12,10 @@ if echo $msg | grep -iqE "^Revert "; then
   exit 0
 fi;
 
+if echo $msg | grep -iqE "^\d{1,2}[.]\d{1,2}[.]\d{1,2}$"; then
+  exit 0
+fi;
+
 if echo $msg | grep -iqE "^(feat|fix|docs|style|refactor|perf|test|chore|ci)(\([^()]{1,}\)){0,1}: [a-z].*"; then
   exit 0
 fi;
